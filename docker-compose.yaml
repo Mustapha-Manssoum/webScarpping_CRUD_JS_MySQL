@@ -1,0 +1,25 @@
+version: '3.8'
+
+services: 
+  mysql_docker:
+    image: mysql
+    restart: unless-stopped
+    container_name: mysql_docker
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"] # Health check to verify MySQL availability
+
+  srk_movies_app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      mysql_docker:
+        condition: service_healthy
+    container_name: srk_movies_app
+    ports:
+      - "3000:3000"
+   
