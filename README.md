@@ -1,5 +1,5 @@
 # Web Scraping Shahrukh Khan Movies and Storing Data in MySQL Database
-This application performs web scraping on a Wikipedia page to extract information about all Shahrukh Khan movies. The extracted data is stored in a MySQL database. The application then implements CRUD (Create, Read, Update, Delete) operations using JavaScript and Express.js.
+This application performs web scraping on a Wikipedia page to extract information about all Shahrukh Khan movies (Because I used to be a big fan during my teenage years). The extracted data is stored in a MySQL database. The application then implements CRUD (Create, Read, Update, Delete) operations using Express-Nodejs.
 
 **Features**:
 - Web Scraping: Utilizes web scraping techniques to extract detailed information about Shahrukh Khan's movies from a specific Wikipedia page.
